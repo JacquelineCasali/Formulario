@@ -11,26 +11,33 @@
     <body>
         <h1>Formulário </h1>
         <form action="" id="form">
-            <label for="name">Nome:</label>
-            <input type="text" id="name">
+            <label for="name" >Nome:</label>
+            <input type="text" id="name" placeholder="Nome">
             
             <label for="email">E-mail:</label>
-            <input type="email" id="email">
+            <input type="email" id="email" placeholder="E-mail">
                   
-            <label for="passorwd">Senha:</label>
-            <input type="password" id="passorwd">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" placeholder="Digite sua Senha">
     
-            <label for="passorwd">Confirmar Senha:</label>
-            <input type="password" id="passorwd">
+            <label for="password">Confirmar Senha:</label>
+            <input type="password" id="confirmation" placeholder="Confirmar Senha">
            
-            <label for="job">Situação de trabalho</label>
+            <label for="job">Planos</label>
             <select name="job" id="job">
-            <option value="">Está buscando emprego</option>
-            <option value="yes">Sim</option>
-            <option value="No">Não</option>
+            <option value="">Escolha o plano</option>
+            <option value="yes">Básico</option>
+            <option value="No">Premium</option>
                 </select>
-        <label for="Mensage">Mensagem:</label>
-        <textarea name="Mensagem" id="Mensagem"></textarea>
+        <label for="menssage">Deixe seu comentário:</label>
+        <textarea name="menssage" id="menssage"></textarea>
+<div>
+
+
+        <input type="checkbox" name="agree" id="agree-id" required/>  
+        <label for="agree-id" id="agree-id">Li e concordo com os termos</label>
+
+    </div>  
                 <button type="submit">Enviar</button>
 
         </form>
