@@ -3,7 +3,6 @@ const form= document.querySelector("#form")
 const nameInput=document.querySelector("#name")
 const emailInput=document.querySelector("#email")
 const passwordInput=document.querySelector("#password")
-const confirmationInput = document.querySelector("confirmation" );
 const jobSelect=document.querySelector("#job")
 const menssageTextarea=document.querySelector("#menssage")
 
@@ -23,12 +22,11 @@ form.addEventListener("submit",(event)=>{
         alert("Por favor, preencha seu email");
         return
     }
-// verificar se a senha está preenchida
+// verificar se a senha está preenchida e com 8 caracteres
 if(!validatePassword(passwordInput.value,8)){
     alert("A senha precisa de no mínio de 8 dígitos");
     return;
 }
-
 
 // verifica se o plano  foi selecionado
 if(jobSelect.value===""){
@@ -59,6 +57,7 @@ if(emailRegex.test(email)){
 return false;
 }
 
+
 // função que valida a senha 
 function validatePassword(password, minDigits){
     if(password.length>=minDigits){
@@ -66,7 +65,19 @@ function validatePassword(password, minDigits){
     }
     return false
 }
-// function validateConfirmar()
 
+// confere senha
 
-
+function confereSenha(){
+    const senha=document.querySelector('input[name=senha]');
+    const confirma=document.querySelector('input[name=confirma]');
+     
+    if(confirma.value===senha.value){
+    confirma.setCustomValidity('');
+        }else{
+     confirma.setCustomValidity('As senhas não confere');
+        }
+     
+    }
+   
+   
